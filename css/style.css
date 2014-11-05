@@ -17,6 +17,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing:border-box;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -25,19 +26,137 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	font-family: 'Roboto' , sans-serif;
 }
 ol, ul {
 	list-style: none;
 }
-blockquote, q {
-	quotes: none;
+/*End of reset */
+/* Start of Custom styles */
+.content{
+	padding: 0 15px;
+	margin: 0 auto;
+	width:970px;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+/*Navigation Section*/
+.top-navigation{
+	background-color: #fff;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+.top-navigation > .content{
+	
+	height: 70px;
+	
 }
+
+.top-navigation .logo{
+	height: 70px;
+}
+.top-navigation .links{
+	float: right;
+	
+	color:#838994;
+	font-size: 16px;
+	margin-top: 25px;
+	-webkit-font-smoothing:antialiased;
+}
+.top-navigation .links li{
+	display: inline-block;
+	margin-left: 25px;
+}
+.top-navigation .links .active{
+	color: #4c5058;
+	font-weight: 500;
+}
+.top-navigation .links li:hover{
+	cursor: pointer;
+	color: #333333;
+}
+/**
+	*Introduction Section
+	*/
+.introduction{
+	background-image: url('../img/firstbackground.jpg');
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 45.938rem;
+	overflow: auto;
+	background-position: 0 bottom;
+}
+
+.introduction h1,
+.introduction h3{
+	color: white;
+	text-align: center;
+	font-weight: 300;
+}
+.introduction h1{
+	margin-top: 12.25rem;
+	font-size: 3.125rem;
+}
+.introduction h3{
+	margin-top: 1.25rem;
+	font-size: 1.563rem;
+}
+/**
+	*The buttons
+	*/
+.introduction .buttons{
+	text-shadow:none;
+	border-style: none;
+	border-radius: 4px;
+	padding: 16px 26px;
+	line-height: 1.33;
+	color: white;
+	text-align: center;
+	margin-top: 1.563rem;
+}
+.introduction .half{
+	width: 49%;
+	padding: 0 0.938rem;
+	display:inline-block;
+	vertical-align: bottom;
+	font-size: 1.125rem;
+	line-height: 1.2;
+}
+.half.learn{
+	text-align: right;
+}
+.half.watch{
+	text-align: left;
+	padding: 1rem 9.938rem;
+	font-weight: 500;
+}
+.introduction .watch img{
+	position: relative;
+	top: 0.625rem;
+	margin-right: 5px;
+}
+/**
+	*bouncing arrow
+	*/
+.introduction{
+	position:relative;
+}
+.bouncing-arrow{
+	position:absolute;
+	height:5.625rem;
+	bottom:0;
+	width:3.250rem;
+	left:50%;
+	z-index:1000;
+	margin-left:-1.625rem;
+}
+.bouncing-arrow img{
+	-webkit-animation:bounce 1.2s ease-in-out infinite alternate;
+	-o-animation: bounce 1.2s ease-in-out infinite alternate;
+	animation:bounce 1.2s ease-in-out infinite alternate;
+}
+/* Chrome, Safari, Opera*/
+@-webkit-keyframes bounce {
+	0%, 100% {margin-top: 0px;}
+	50%{margin-top:2rem;}
+}
+
+
+
